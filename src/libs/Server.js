@@ -5,7 +5,7 @@ import cors from 'cors';
 import Express from 'express';
 import helmet from 'helmet';
 import { ApolloServer } from 'apollo-server-express';
-import { errorHandlerRoute, notFoundRoute } from './routes';
+
 
 export default class Server {
     constructor(config) {
@@ -62,12 +62,6 @@ export default class Server {
     this.app.use('/health-check', (req, res) => {
       res.send('I am OK');
     });
-
-    // catch 404 and forward to error handler
-    this.app.use(notFoundRoute);
-
-    // error handler, send stacktrace only during development
-    this.app.use(errorHandlerRoute);
   }
 
   /**

@@ -1,12 +1,20 @@
 type Mutation {
-  addUser(name: String!, friends: [Int]): User!
+  addUser(name: String!, email: String!): User!
+  addMessage(message: MessageInput!): Message
 }
 
 type Query {
   getAllUser: [User]!
   getUser(id: Int!): User!
+  getAllMessage: [Message]!
+  login(name: String!, email: String!): User!
 }
 
 type Subscription {
   userAdded: User!
+  messageAdded: Message!
+}
+input MessageInput{
+  id: Int!
+  text: String
 }

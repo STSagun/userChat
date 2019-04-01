@@ -2,4 +2,9 @@ type User {
   id: Int!
   name: String
   email: String
+  messages: [Message]
+}
+type Message {
+  id: Int!
+  text: String!
 }

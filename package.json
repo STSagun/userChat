@@ -1,8 +1,8 @@
 {
-  "name": "dan-governance-apollo-server",
+  "name": "fullstack-tutorial-server",
   "version": "1.0.0",
-  "description": "Apollo Server for the Data Governance",
-  "main": "build/index.js",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
     "start": "nodemon",
     "startup": "node ./build/server.js",
@@ -14,7 +14,6 @@
     "test:c": "npm run test -- --coverage",
     "test:w": "npm run test -- --watchAll"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -42,11 +41,6 @@
     "query-string": "^6.2.0",
     "ramda": "^0.25.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm run test"
-    }
-  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -62,5 +56,11 @@
     "husky": "^1.2.1",
     "jest-sonar-reporter": "2.0.0",
     "nodemon": "^1.18.9"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__utils"
+    ]
   }
 }
